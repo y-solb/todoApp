@@ -6,7 +6,9 @@ const StyledList = styled.li`
   display: flex;
 `;
 
-const H3 = styled.h3``;
+const H3 = styled.h3`
+  color: ${(props) => props.textType};
+`;
 
 const TodoItem = ({ todo, onComplete }) => {
   const handleChange = () => {
@@ -14,8 +16,8 @@ const TodoItem = ({ todo, onComplete }) => {
   };
   return (
     <StyledList>
-      <H3>{todo.text}</H3>
-      <Checkbox type="checkbox" checked={todo.completed} onChange={handleChange} />
+      <Checkbox type="checkbox" checked={todo.isCompleted} onChange={handleChange} />
+      <H3 textType={todo.isCompleted ? 'grey' : 'black'}>{todo.text}</H3>
     </StyledList>
   );
 };

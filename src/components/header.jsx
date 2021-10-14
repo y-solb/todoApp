@@ -8,8 +8,9 @@ const StyledHeader = styled.header`
 
 const H1 = styled.h1``;
 const P = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 75px;
+  color: #757072;
 `;
 
 const Header = ({ totalCount, completedCount }) => (

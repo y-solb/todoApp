@@ -4,7 +4,12 @@ import AddForm from './components/addForm';
 import Header from './components/header';
 import TodoList from './components/todoList';
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 function App() {
   const [todos, setTodos] = useState([

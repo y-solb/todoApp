@@ -4,6 +4,7 @@ import TodoItem from './todoItem';
 
 const StyledUl = styled.ul`
   list-style: none;
+  padding: 0;
 `;
 
 const TodoList = ({ todos, onComplete }) => (

@@ -1,10 +1,24 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
 
 const StyledForm = styled.form`
   list-style: none;
+`;
+const StyledInput = styled.input`
+  width: 230px;
+  height: 24px;
+  border: 2px solid #757072;
+  border-radius: 3px;
+  outline: none;
+`;
+const StyledButton = styled.button`
+  height: 24px;
+  color: white;
+  background-color: #757072;
+  border-radius: 3px;
+  border: none;
+  margin: 0 4px;
+  padding: 0 8px;
 `;
 
 const AddForm = ({ onAdd }) => {
@@ -18,8 +32,8 @@ const AddForm = ({ onAdd }) => {
 
   return (
     <StyledForm onSubmit={handleAdd}>
-      <Input inputRef={inputRef} />
-      <Button onClick={handleAdd}>+</Button>
+      <StyledInput ref={inputRef} />
+      <StyledButton onClick={handleAdd}>+</StyledButton>
     </StyledForm>
   );
 };
