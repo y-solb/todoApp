@@ -42,6 +42,7 @@ function App() {
 
   return (
     <Container>
+      <Header totalCount={todos.length} completedCount={todos.filter((todo) => todo.isCompleted === true).length} />
       <AddForm onAdd={onAdd} />
       <TodoList todos={todos} onComplete={onComplete} />
     </Container>
