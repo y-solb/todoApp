@@ -26,7 +26,8 @@ const AddForm = ({ onAdd }) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    onAdd(inputRef.current.value);
+    const inputItem = inputRef.current.value;
+    inputItem && onAdd(inputItem);
     inputRef.current.value = '';
   };
 
