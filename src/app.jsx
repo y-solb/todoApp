@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import AddForm from './components/addForm';
+import Header from './components/header';
 import TodoList from './components/todoList';
 
 const Container = styled.div``;
@@ -34,8 +36,13 @@ function App() {
     );
   };
 
+  const onAdd = (item) => {
+    setTodos([...todos, { id: Date.now(), text: item, isCompleted: false }]);
+  };
+
   return (
     <Container>
+      <AddForm onAdd={onAdd} />
       <TodoList todos={todos} onComplete={onComplete} />
     </Container>
   );
